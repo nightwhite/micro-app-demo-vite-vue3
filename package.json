@@ -6,11 +6,13 @@
   "private": true,
   "scripts": {
     "bootstrap": "pnpm i && npm-run-all --serial install:*",
+    "dev": "npm-run-all --parallel dev-main:vite dev-child:*",
     "install:main-vite-vue3": "cd main_apps/vite-vue3 && pnpm i",
     "install:child-vue3": "cd child_apps/vue3 && pnpm i",
-    "dev": "npm-run-all --parallel dev-main:vite dev-child:*",
+    "install:child-sidebar": "cd child_apps/sidebar && pnpm i",
     "dev-main:vite": "cd main_apps/vite-vue3 && pnpm dev",
     "dev-child:vue3": "cd child_apps/vue3 && pnpm dev",
+    "dev-child:sidebar": "cd child_apps/sidebar && pnpm dev",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
